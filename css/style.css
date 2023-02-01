@@ -20,13 +20,27 @@ header {
 .square {
   border: 2px solid white;
 }
+
 .square {
-  height: calc(100% / 10);
-  width: calc(100% / 10);
   cursor: crosshair;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.easy {
+  height: calc(100% / 10);
+  width: calc(100% / 10);
+}
+
+.normal {
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+}
+
+.hard {
+  height: calc(100% / 7);
+  width: calc(100% / 7);
 }
 
 .square.active {

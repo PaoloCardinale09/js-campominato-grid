@@ -13,16 +13,38 @@
  *  - la dimensione della griglia
  *  - devo assegnare una classe nel DOM per modificare height e width di square
  */
+// const easyChallengeEl = document.getElementById("easy-level");
+// const normalChallengeEl = document.getElementById("normal-level");
+// const hardChallengeEl = document.getElementById("hard-level");
+
+const challengeSelectEl = document.getElementById("challenge-select");
 
 const gridEl = document.getElementById("grid");
 const startButtonEl = document.getElementById("start-button");
-// let gridDimension = 0;
-// generateGrid(gridEl);
+const easy = 100;
+const normal = 81;
+const hard = 49;
+let gridDimension = 0;
+let classToAdd = "";
 
 startButtonEl.addEventListener("click", function () {
-  gridDimension = 100;
+  let levelChoice = challengeSelectEl.value;
+  if (levelChoice == "easy") {
+    classToAdd = "easy";
+    gridDimension = easy;
+  } else if (levelChoice == "normal") {
+    classToAdd = "normal";
+    gridDimension = normal;
+  } else {
+    classToAdd = "hard";
+    gridDimension = hard;
+  }
   generateGrid(gridEl, gridDimension);
 });
+
+// var e = document.getElementById("ddlViewBy");
+// var value = e.value;
+// var text = e.options[e.selectedIndex].text;
 
 /****************************************************
  *                                                  *
@@ -49,7 +71,7 @@ function generateGrid(gridEl, dimension) {
     // squareEl.append(i + 1);
 
     // aggiungo la classe per far si che diventi un quadrato e gli da i bordi
-    squareEl.classList.add("square");
+    squareEl.classList.add("square", classToAdd);
 
     //  aggiungo un addeventlistener sul click che faccia il "toggle" della classe .active
     squareEl.addEventListener("click", function () {
