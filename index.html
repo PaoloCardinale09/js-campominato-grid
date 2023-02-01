@@ -29,6 +29,24 @@
   </head>
 
   <body>
-    <main id="grid"></main>
+    <main>
+      <header class="mb-2">
+        <div
+          class="container text-light d-flex h-100 justify-content-end align-items-center"
+        >
+          <label for="challange-select">Difficoltà</label>
+
+          <select name="challenge" id="challenge-select">
+            <option value="">-Selezionare la difficoltà-</option>
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+
+          <button id="start-button">START</button>
+        </div>
+      </header>
+      <div id="grid"></div>
+    </main>
   </body>
 </html>
