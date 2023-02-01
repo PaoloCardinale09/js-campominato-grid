@@ -20,7 +20,7 @@ const startButtonEl = document.getElementById("start-button");
 // generateGrid(gridEl);
 
 startButtonEl.addEventListener("click", function () {
-  gridDimension = 50;
+  gridDimension = 100;
   generateGrid(gridEl, gridDimension);
 });
 
