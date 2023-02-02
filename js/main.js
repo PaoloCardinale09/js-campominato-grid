@@ -77,7 +77,7 @@ function generateGrid(gridEl, dimension) {
     squareEl.addEventListener("click", function () {
       this.classList.toggle("active");
 
-      console.log(squareEl);
+      console.log(this.innerHTML);
     });
 
     //   aggiungo alla griglia

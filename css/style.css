@@ -1,5 +1,5 @@
 body {
-  background-color: gray;
+  background-color: #c0c0c0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,7 +20,9 @@ header {
 .square {
   border: 2px solid white;
 }
-
+#challenge-select {
+  width: fit-content;
+}
 .square {
   cursor: crosshair;
   display: flex;
